@@ -10,6 +10,17 @@ grafo = {
     8: [6]
 }
 
+grafo1 = {
+    0: [1, 2],
+    1: [3],
+    2: [1, 3, 4],
+    3: [6],
+    4: [3, 5, 6],
+    5: [],
+    6: [],
+}
+
+
 def busca_em_largura(grafo, inicio, objetivo):    
     tempo_inicio = time.time()
     fila = deque([(inicio, [inicio])])
@@ -28,7 +39,7 @@ def busca_em_largura(grafo, inicio, objetivo):
                 fila.append((vizinho, caminho + [vizinho]))
     return None
 
-caminho = busca_em_largura(grafo, 1, 10)
+caminho = busca_em_largura(grafo1, 1, 6)
 
 if caminho:
     print("Caminho encontrado:", caminho)

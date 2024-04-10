@@ -26,11 +26,20 @@ grafo = {
     8: [6]
 }
 
+grafo1 = {
+    0: [1, 2],
+    1: [3],
+    2: [1, 3, 4],
+    3: [6],
+    4: [3, 5, 6],
+    5: [],
+    6: [],
+}
 vertice_inicial = 1
-vertice_destino = 10
+vertice_destino = 6
 
 inicio = time.time()
-caminho_encontrado = busca_caminho_profundidade(grafo, vertice_inicial, vertice_destino)
+caminho_encontrado = busca_caminho_profundidade(grafo1, vertice_inicial, vertice_destino)
 fin = time.time()
 
 if caminho_encontrado:
